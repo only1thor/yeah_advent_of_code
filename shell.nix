@@ -2,14 +2,13 @@
 
 pkgs.mkShell {
   buildInputs = with pkgs; [
+    tree
     rustc
     cargo
     rustfmt
     rust-analyzer
     clippy
   ];
-  shellHook = ''
-    exec fish 
-  '';
+  
   RUST_BACKTRACE = 1;
 }
