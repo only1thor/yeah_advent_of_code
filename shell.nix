@@ -8,6 +8,8 @@ pkgs.mkShell {
     rust-analyzer
     clippy
   ];
-
+  shellHook = ''
+    exec fish 
+  '';
   RUST_BACKTRACE = 1;
 }
